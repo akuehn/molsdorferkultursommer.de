@@ -1,0 +1,75 @@
+@media (max-width: 400px) {
+	header {
+		min-height: 700px !important;
+	}
+	header .logo {
+		top: 30px;
+		left: 30px;
+	}
+	header .tickets-button {
+		top: 26px;
+		right: 145px;
+	}
+	header .menu-button {
+		top: 35px;
+		right: 25px;
+	}
+	main .main-text {
+		font-size: 18px;
+	}
+	main .ticket-container .row {
+		width: 100% !important;
+	}
+	main .ticket-container::before {
+		top: -6px;
+		font-size: 9em;
+	}
+	main .ticket-container-headline {
+		font-size: 1.5em;
+	}
+	footer .copyright,
+	footer .social-wrapper {
+		position: relative !important;
+		bottom: 0 !important;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		min-height: 800px;
+	}
+	header .logo {
+		top: 25px;
+		left: 25px;
+	}
+	header .tickets-button {
+		top: 28px;
+		right: 22px;
+	}
+	header .hero {
+		top: 100px;
+	}
+	header .sub-headline {
+		margin: 50px auto 0;
+	}
+	main {
+		background-size: cover;
+	}
+	main .main-text {
+		font-size: 16px;
+	}
+	main .ticket-container {
+		width: 100%;
+	}
+	.artist-info-wrapper {
+		position: absolute;
+		height: 100%;
+	}
+	.artist-single-wrapper .artist-info-wrapper .artist-main-topic {
+		top: 5px !important;
+		left: 40px !important;
+	}
+	.artist-info-wrapper .artist-main-topic span {
+		font-size: 6rem;
+	}
+}

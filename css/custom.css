@@ -1,0 +1,521 @@
+/*
+Author: René Schumann
+web: https://www.viveart.de
+*/
+
+/* playfair-display-800 - latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/playfair-display-v22-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/playfair-display-v22-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/playfair-display-v22-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/playfair-display-v22-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/playfair-display-v22-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/playfair-display-v22-latin-700.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
+}
+
+
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ubuntu-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu-v15-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/ubuntu-v15-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/ubuntu-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ubuntu-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ubuntu-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ubuntu-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ubuntu-v15-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'lakeshoreregular';
+    src: url('../fonts/lakeshore-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lakeshore-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-display: swap;
+
+}
+
+body {
+	/* background: url( "../img/Screendesign-MKS-Nr-5-2018.jpg" ) #030518 no-repeat top; */
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: #000111;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 18px;
+	font-family: 'Ubuntu';
+}
+
+a {
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.wrapper-breakout {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw)
+}
+
+.wrapper-breakout.no-gutters {
+	margin-left: calc(50% - 50vw + 8px);
+	margin-right: calc(50% - 50vw + 8px)
+}
+
+header {
+	height: 100vh;
+	min-height: 1100px;
+	background: url( "../img/header.jpg" ) no-repeat bottom;
+	background-size: cover;
+	position: relative;
+}
+
+header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #1b1d42;
+	opacity: .5;
+}
+
+header .logo {
+	position: absolute;
+	top: 72px;
+	left: 72px;
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+}
+
+header .menu-button {
+	position: absolute;
+	top: 80px; 
+	right: 65px;
+	z-index: 1;
+}
+
+header .navbar-toggler-icon {
+	background-image:
+		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	width: 50px;
+	height: 50px;
+}
+
+header .tickets-button {
+	position: absolute;
+	top: 68px;
+	right: 72px;
+	z-index: 1;
+}
+
+header .tickets-button a {
+	color: #fff;
+}
+
+header .tickets-button img {
+	transition: all ease-in-out .3s;
+	color: #fff;
+	box-shadow: 0;
+}
+
+header .tickets-button img:hover {
+	box-shadow: 0px 3px 0px 0px #fff;
+}
+
+header .hero {
+	position: absolute;
+	top:0px;
+	left: 0;
+	right: 0;
+	bottom: 150px;
+	text-align: center;
+}
+
+header .hero>div {
+	max-width: 85vw;
+	max-height: 100vh;
+	margin: 0 auto;
+}
+
+header .hero>div img {
+	width: auto;
+	height: auto;
+}
+
+header .sub-headline {
+	width: 100%;
+	max-width: 650px;
+	margin: 10px auto 0;
+}
+
+header .sub-headline .sub-headline-text {
+	font-family: 'lakeshoreregular';
+	font-size: 50px;
+	line-height: 1.1;
+	color: #fff;
+}
+header .sub-headline .sub-headline-text span {
+	color: #5bc3ba;
+}
+header .sub-headline .sub-headline-line {
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%); 
+	height: 4px;
+}
+
+main {
+	min-height: 1000px;
+	background-image: url( ../img/background-smallv2.png );
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+	margin-top: -90px;
+	z-index: 1;
+	position: relative;
+	padding-top: 60px;
+	overflow: hidden;
+}
+
+main .main-text-wrapper {
+	color: #abcee0;
+}
+
+main .main-text-topic {
+	font-weight: bold;
+}
+
+main .main-text {
+	font-size: 24px;
+}
+
+main .ticket-container {
+	background: #5bc3ba;
+	width: 69%;
+	position: relative;
+	overflow: hidden;
+}
+
+main .ticket-container:before {
+	content: 'TICKETS';
+	position: absolute;
+	font-size: 15em;
+	left: 0;
+	top: -20px;
+	transform: rotate(-9deg);
+	line-height: .8;
+	color: #37ada3;
+	z-index: 0;
+	font-family: 'lakeshoreregular';
+}
+
+main .ticket-container-headline {
+	color: #0a1941;
+	font-family: 'Playfair Display';
+	font-size: 2.5em;
+}
+
+main .ticket-container-line span {
+	width: 100%;
+	height: 3px;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(93deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+	display: block;
+}
+
+main .ticket-container-text {
+	color: #fff;
+}
+
+main .main-text-button-wrapper .line {
+	width: 50px;
+	height: 3px;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(93deg, rgba(91, 195, 186, 0) 0%, rgba(91, 195, 186, 1) 50%, rgba(91, 195, 186, 1) 100%);
+	display: block;
+	margin: 1.5em auto;
+}
+
+main .main-text-button-wrapper .main-text-button {
+	background: #5bc3ba;
+	position: relative;
+	overflow: hidden;
+	color: #0a1941;
+	padding: 1rem 2rem;
+	display: inline-block;
+	font-family: 'Playfair Display';
+	text-decoration: none;
+	font-size: 35px;
+}
+
+main .main-text-button-wrapper .main-text-button:before {
+	content: 'TICKETS';
+	position: absolute;
+	font-size: 85px;
+	left: 0;
+	top: -10px;
+	transform: rotate(-9deg);
+	line-height: .8;
+	color: #34b0a5;
+	z-index: 0;
+	font-family: 'lakeshoreregular';
+}
+
+main .main-text-button-wrapper .main-text-button:after {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(93deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+	display: block;
+	right: 34px;
+}
+
+/* Artist */
+.artist-wrapper {
+	
+}
+
+.artist-single-wrapper {
+	margin-top: 10rem;
+}
+
+.artist-single-wrapper .row {
+	position: relative;
+}
+
+.artist-image {
+	
+}
+
+.artist-image div {
+	height: 720px;
+	position: relative;
+}
+/* .artist-image div:after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	pointer-events: none;
+	background: rgb(92, 192, 184);
+	mix-blend-mode: color;
+} */
+.artist-image div img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.artist-info-wrapper {
+	position: relative;
+}
+
+.artist-info-wrapper .artist-info-detail-wrapper {
+	
+}
+@media screen and (min-width: 768px) {
+	.artist-single-wrapper>.flex-sm-row-reverse .artist-info-wrapper .artist-main-topic {
+		left: auto;
+		left: -15px;
+		top: 40px;
+	}
+}
+
+.artist-info-wrapper .artist-main-topic {
+	position: absolute;
+}
+
+.artist-single-wrapper[data-id="1"] .artist-info-wrapper .artist-main-topic {
+	top: 65px;
+	left: -100px;
+}
+.artist-single-wrapper[data-id="3"] .artist-info-wrapper .artist-main-topic {
+	top: 65px;
+	left: -120px;
+}
+
+.artist-info-wrapper .artist-main-topic span {
+	color: #fff;
+	font-size: 135px;
+	transform: rotate(-10deg) skew(-16deg);
+	display: block;
+	text-shadow: 2px 3px 5px #6cdad2;
+	font-family: 'lakeshoreregular';
+	/* text-transform: uppercase; */
+	line-height: .7;
+}
+
+.artist-info-wrapper .artist-main-name {
+	color: #6cdad2;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.artist-info-wrapper .artist-line {
+	margin: 30px 0;
+}
+
+.artist-info-wrapper .artist-line span {
+	width: 50px;
+	height: 3px;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(93deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+	display: block;
+}
+
+.artist-info-wrapper .artist-text {
+	color: #90b0c7;
+	font-size: 18px;
+	line-height: 2;
+}
+/* END */
+footer {
+	/* height: 750px;
+	background: #0c0d1e; */
+}
+
+footer .container {
+	position: relative;
+}
+
+footer .container .footer-inner-wrapper {
+	
+}
+
+footer, footer a, footer a:hover, footer .blockquote-footer {
+	color: #5bc3ba
+}
+
+footer .blockquote {
+	font-size: 40px;
+	line-height: 1.2;
+	font-family: 'Playfair Display';
+}
+
+footer .blockquote-footer {
+	font-size: 22px;
+	font-family: 'Playfair Display';
+}
+
+footer .copyright {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+footer .social-wrapper {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+footer .social-wrapper .social-item {
+	background: #2c5359;
+	width: 60px;
+	height: 60px;
+	display: inline-flex;
+	margin: 10px 9px;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	color: #0c0c1d;
+}
+
+footer .social-wrapper .social-item svg {
+	width: 40px;
+	height: 40px;
+	color: #0c0c1d;
+}
+
+footer .to-top {
+	width: 65px;
+	height: 65px;
+	border: 2px solid #5bc3ba;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 165px;
+	right: -33px;
+}
+
+#scroll-top {
+	opacity: 0;
+	position: fixed;
+	bottom: -60px;
+	right: -60px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 1px;
+	z-index: 1000;
+	transition: right ease .5s, bottom ease .5s, opacity ease 1s;
+}
+#scroll-top.scroll-top-right {
+	right: 30px;
+	bottom: 30px;
+	opacity: .9;
+}
+#scroll-top span {
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 10px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235cc0b8' d='M7,15L12,10L17,15H7Z' /%3E%3C/svg%3E");
+	background-size: 40px 40px;
+	background-position: center center;
+	display: block;
+	width: 65px;
+	height: 65px;
+	background-repeat: no-repeat;
+	border: 2px solid #5bc3ba;
+}
+
+body.modal-open {
+	/* padding-right: 0 !important; */
+}
+
+.modal .btn-close {
+	position: absolute;
+	right: 30px;
+	z-index: 36;
+	background-color: #5bc3ba;
+	cursor: pointer;
+	opacity: 1;
+	top: 0;
+	top: 15px;
+	width: 1.5em;
+	height: 1.5em;
+}
